@@ -1,0 +1,7 @@
+2020-03-25 14:05:41,047 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2020-03-25 14:05:41,058 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2020-03-25 14:05:41,059 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: D:\WORK\VS2019NETCODETEST\TEST02\TEST02
+2020-03-25 14:05:53,350 [4] ERROR TEST02.Utlity.Filter.CustomerExceptionFilterAttribute - 系统错误：/Attempted to divide by zero.
+2020-03-25 14:07:00,732 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2020-03-25 14:07:00,741 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2020-03-25 14:07:00,743 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: D:\WORK\VS2019NETCODETEST\TEST02\TEST02

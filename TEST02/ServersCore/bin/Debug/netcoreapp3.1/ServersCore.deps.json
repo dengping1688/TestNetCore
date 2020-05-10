@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "ServersCore/1.0.0": {
+        "dependencies": {
+          "IServersCore": "1.0.0"
+        },
+        "runtime": {
+          "ServersCore.dll": {}
+        }
+      },
+      "IServersCore/1.0.0": {
+        "runtime": {
+          "IServersCore.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ServersCore/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "IServersCore/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,12 @@
+D:\WORK\VS2019NETCODETEST\TEST02\ServersCore\obj\Debug\netcoreapp3.1\ServersCore.csprojAssemblyReference.cache
+D:\WORK\VS2019NETCODETEST\TEST02\ServersCore\obj\Debug\netcoreapp3.1\ServersCore.csproj.CoreCompileInputs.cache
+D:\WORK\VS2019NETCODETEST\TEST02\ServersCore\obj\Debug\netcoreapp3.1\ServersCore.AssemblyInfoInputs.cache
+D:\WORK\VS2019NETCODETEST\TEST02\ServersCore\obj\Debug\netcoreapp3.1\ServersCore.AssemblyInfo.cs
+D:\WORK\VS2019NETCODETEST\TEST02\ServersCore\bin\Debug\netcoreapp3.1\ServersCore.deps.json
+D:\WORK\VS2019NETCODETEST\TEST02\ServersCore\bin\Debug\netcoreapp3.1\ServersCore.dll
+D:\WORK\VS2019NETCODETEST\TEST02\ServersCore\bin\Debug\netcoreapp3.1\ServersCore.pdb
+D:\WORK\VS2019NETCODETEST\TEST02\ServersCore\bin\Debug\netcoreapp3.1\IServersCore.dll
+D:\WORK\VS2019NETCODETEST\TEST02\ServersCore\bin\Debug\netcoreapp3.1\IServersCore.pdb
+D:\WORK\VS2019NETCODETEST\TEST02\ServersCore\obj\Debug\netcoreapp3.1\ServersCore.csproj.CopyComplete
+D:\WORK\VS2019NETCODETEST\TEST02\ServersCore\obj\Debug\netcoreapp3.1\ServersCore.dll
+D:\WORK\VS2019NETCODETEST\TEST02\ServersCore\obj\Debug\netcoreapp3.1\ServersCore.pdb

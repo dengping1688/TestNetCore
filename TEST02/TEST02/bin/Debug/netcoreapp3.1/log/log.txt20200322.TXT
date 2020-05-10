@@ -1,0 +1,203 @@
+2020-03-22 18:01:00,982 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://[::]:5177
+2020-03-22 18:01:00,992 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2020-03-22 18:01:00,993 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Production
+2020-03-22 18:01:00,993 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: D:\WORK\VS2019NETCODETEST\TEST02\TEST02\bin\Debug\netcoreapp3.1
+2020-03-22 18:01:06,129 [6] WARN  Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware - Failed to determine the https port for redirect.
+2020-03-22 18:01:06,162 [6] ERROR TEST02.Utlity.Filter.CustomerExceptionFilterAttribute - 系统错误：/home/indexAttempted to divide by zero.
+2020-03-22 18:04:47,974 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://[::]:5177
+2020-03-22 18:04:47,981 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2020-03-22 18:04:47,981 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Production
+2020-03-22 18:04:47,981 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: D:\WORK\VS2019NETCODETEST\TEST02\TEST02\bin\Debug\netcoreapp3.1
+2020-03-22 18:04:52,409 [6] WARN  Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware - Failed to determine the https port for redirect.
+2020-03-22 18:04:52,465 [6] ERROR Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware - An unhandled exception has occurred while executing the request.
+System.DivideByZeroException: Attempted to divide by zero.
+   at TEST02.Controllers.HomeController.Index() in D:\WORK\VS2019NETCODETEST\TEST02\TEST02\Controllers\HomeController.cs:line 26
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2020-03-22 18:05:14,914 [20] ERROR Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware - An unhandled exception has occurred while executing the request.
+Autofac.Core.Registration.ComponentNotRegisteredException: The requested service 'TEST02.Utlity.Filter.CustomerExceptionFilterAttribute' has not been registered. To avoid this exception, either register a component to provide the service, check for service registration using IsRegistered(), or use the ResolveOptional() method to resolve an optional dependency.
+   at Autofac.ResolutionExtensions.ResolveService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve(IComponentContext context, Type serviceType, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve(IComponentContext context, Type serviceType)
+   at Autofac.Extensions.DependencyInjection.AutofacServiceProvider.GetRequiredService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.AspNetCore.Mvc.ServiceFilterAttribute.CreateInstance(IServiceProvider serviceProvider)
+   at Microsoft.AspNetCore.Mvc.Filters.DefaultFilterProvider.ProvideFilter(FilterProviderContext context, FilterItem filterItem)
+   at Microsoft.AspNetCore.Mvc.Filters.DefaultFilterProvider.OnProvidersExecuting(FilterProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Filters.FilterFactory.CreateUncachedFiltersCore(IFilterProvider[] filterProviders, ActionContext actionContext, List`1 filterItems)
+   at Microsoft.AspNetCore.Mvc.Filters.FilterFactory.GetAllFilters(IFilterProvider[] filterProviders, ActionContext actionContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerCache.GetCachedResult(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerProvider.OnProvidersExecuting(ActionInvokerProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionInvokerFactory.CreateInvoker(ActionContext actionContext)
+   at Microsoft.AspNetCore.Mvc.Routing.ActionEndpointFactory.<>c__DisplayClass7_0.<CreateRequestDelegate>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2020-03-22 18:05:40,765 [24] ERROR Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware - An unhandled exception has occurred while executing the request.
+Autofac.Core.Registration.ComponentNotRegisteredException: The requested service 'TEST02.Utlity.Filter.CustomerExceptionFilterAttribute' has not been registered. To avoid this exception, either register a component to provide the service, check for service registration using IsRegistered(), or use the ResolveOptional() method to resolve an optional dependency.
+   at Autofac.ResolutionExtensions.ResolveService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve(IComponentContext context, Type serviceType, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve(IComponentContext context, Type serviceType)
+   at Autofac.Extensions.DependencyInjection.AutofacServiceProvider.GetRequiredService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.AspNetCore.Mvc.ServiceFilterAttribute.CreateInstance(IServiceProvider serviceProvider)
+   at Microsoft.AspNetCore.Mvc.Filters.DefaultFilterProvider.ProvideFilter(FilterProviderContext context, FilterItem filterItem)
+   at Microsoft.AspNetCore.Mvc.Filters.DefaultFilterProvider.OnProvidersExecuting(FilterProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Filters.FilterFactory.CreateUncachedFiltersCore(IFilterProvider[] filterProviders, ActionContext actionContext, List`1 filterItems)
+   at Microsoft.AspNetCore.Mvc.Filters.FilterFactory.GetAllFilters(IFilterProvider[] filterProviders, ActionContext actionContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerCache.GetCachedResult(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerProvider.OnProvidersExecuting(ActionInvokerProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionInvokerFactory.CreateInvoker(ActionContext actionContext)
+   at Microsoft.AspNetCore.Mvc.Routing.ActionEndpointFactory.<>c__DisplayClass7_0.<CreateRequestDelegate>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2020-03-22 18:06:28,837 [27] ERROR Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware - An unhandled exception has occurred while executing the request.
+Autofac.Core.Registration.ComponentNotRegisteredException: The requested service 'TEST02.Utlity.Filter.CustomerExceptionFilterAttribute' has not been registered. To avoid this exception, either register a component to provide the service, check for service registration using IsRegistered(), or use the ResolveOptional() method to resolve an optional dependency.
+   at Autofac.ResolutionExtensions.ResolveService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve(IComponentContext context, Type serviceType, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve(IComponentContext context, Type serviceType)
+   at Autofac.Extensions.DependencyInjection.AutofacServiceProvider.GetRequiredService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.AspNetCore.Mvc.ServiceFilterAttribute.CreateInstance(IServiceProvider serviceProvider)
+   at Microsoft.AspNetCore.Mvc.Filters.DefaultFilterProvider.ProvideFilter(FilterProviderContext context, FilterItem filterItem)
+   at Microsoft.AspNetCore.Mvc.Filters.DefaultFilterProvider.OnProvidersExecuting(FilterProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Filters.FilterFactory.CreateUncachedFiltersCore(IFilterProvider[] filterProviders, ActionContext actionContext, List`1 filterItems)
+   at Microsoft.AspNetCore.Mvc.Filters.FilterFactory.GetAllFilters(IFilterProvider[] filterProviders, ActionContext actionContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerCache.GetCachedResult(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerProvider.OnProvidersExecuting(ActionInvokerProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionInvokerFactory.CreateInvoker(ActionContext actionContext)
+   at Microsoft.AspNetCore.Mvc.Routing.ActionEndpointFactory.<>c__DisplayClass7_0.<CreateRequestDelegate>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2020-03-22 18:06:47,388 [31] ERROR Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware - An unhandled exception has occurred while executing the request.
+Autofac.Core.Registration.ComponentNotRegisteredException: The requested service 'TEST02.Utlity.Filter.CustomerExceptionFilterAttribute' has not been registered. To avoid this exception, either register a component to provide the service, check for service registration using IsRegistered(), or use the ResolveOptional() method to resolve an optional dependency.
+   at Autofac.ResolutionExtensions.ResolveService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve(IComponentContext context, Type serviceType, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve(IComponentContext context, Type serviceType)
+   at Autofac.Extensions.DependencyInjection.AutofacServiceProvider.GetRequiredService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.AspNetCore.Mvc.ServiceFilterAttribute.CreateInstance(IServiceProvider serviceProvider)
+   at Microsoft.AspNetCore.Mvc.Filters.DefaultFilterProvider.ProvideFilter(FilterProviderContext context, FilterItem filterItem)
+   at Microsoft.AspNetCore.Mvc.Filters.DefaultFilterProvider.OnProvidersExecuting(FilterProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Filters.FilterFactory.CreateUncachedFiltersCore(IFilterProvider[] filterProviders, ActionContext actionContext, List`1 filterItems)
+   at Microsoft.AspNetCore.Mvc.Filters.FilterFactory.GetAllFilters(IFilterProvider[] filterProviders, ActionContext actionContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerCache.GetCachedResult(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerProvider.OnProvidersExecuting(ActionInvokerProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionInvokerFactory.CreateInvoker(ActionContext actionContext)
+   at Microsoft.AspNetCore.Mvc.Routing.ActionEndpointFactory.<>c__DisplayClass7_0.<CreateRequestDelegate>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2020-03-22 18:06:49,460 [30] ERROR Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware - An unhandled exception has occurred while executing the request.
+Autofac.Core.Registration.ComponentNotRegisteredException: The requested service 'TEST02.Utlity.Filter.CustomerExceptionFilterAttribute' has not been registered. To avoid this exception, either register a component to provide the service, check for service registration using IsRegistered(), or use the ResolveOptional() method to resolve an optional dependency.
+   at Autofac.ResolutionExtensions.ResolveService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve(IComponentContext context, Type serviceType, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve(IComponentContext context, Type serviceType)
+   at Autofac.Extensions.DependencyInjection.AutofacServiceProvider.GetRequiredService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.AspNetCore.Mvc.ServiceFilterAttribute.CreateInstance(IServiceProvider serviceProvider)
+   at Microsoft.AspNetCore.Mvc.Filters.DefaultFilterProvider.ProvideFilter(FilterProviderContext context, FilterItem filterItem)
+   at Microsoft.AspNetCore.Mvc.Filters.DefaultFilterProvider.OnProvidersExecuting(FilterProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Filters.FilterFactory.CreateUncachedFiltersCore(IFilterProvider[] filterProviders, ActionContext actionContext, List`1 filterItems)
+   at Microsoft.AspNetCore.Mvc.Filters.FilterFactory.GetAllFilters(IFilterProvider[] filterProviders, ActionContext actionContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerCache.GetCachedResult(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerProvider.OnProvidersExecuting(ActionInvokerProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionInvokerFactory.CreateInvoker(ActionContext actionContext)
+   at Microsoft.AspNetCore.Mvc.Routing.ActionEndpointFactory.<>c__DisplayClass7_0.<CreateRequestDelegate>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2020-03-22 18:08:38,739 [2] INFO  Microsoft.Hosting.Lifetime - Application is shutting down...
+2020-03-22 18:09:36,940 [1] FATAL Microsoft.AspNetCore.Server.Kestrel - Unable to start Kestrel.
+System.FormatException: Invalid url: 'http:*:5177'
+   at Microsoft.AspNetCore.Http.BindingAddress.Parse(String address)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.ParseAddress(String address, Boolean& https)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(IServerAddressesFeature addresses, KestrelServerOptions serverOptions, ILogger logger, Func`2 createBinding)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+2020-03-22 18:10:02,460 [1] FATAL Microsoft.AspNetCore.Server.Kestrel - Unable to start Kestrel.
+System.FormatException: Invalid url: 'http//:*:5177'
+   at Microsoft.AspNetCore.Http.BindingAddress.Parse(String address)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.ParseAddress(String address, Boolean& https)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(IServerAddressesFeature addresses, KestrelServerOptions serverOptions, ILogger logger, Func`2 createBinding)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+2020-03-22 18:10:32,756 [1] FATAL Microsoft.AspNetCore.Server.Kestrel - Unable to start Kestrel.
+System.FormatException: Invalid url: 'http:*:5177'
+   at Microsoft.AspNetCore.Http.BindingAddress.Parse(String address)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.ParseAddress(String address, Boolean& https)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(IServerAddressesFeature addresses, KestrelServerOptions serverOptions, ILogger logger, Func`2 createBinding)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+2020-03-22 18:11:41,667 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://[::]:5177
+2020-03-22 18:11:41,673 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2020-03-22 18:11:41,674 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Production
+2020-03-22 18:11:41,674 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: D:\WORK\VS2019NETCODETEST\TEST02\TEST02\bin\Debug\netcoreapp3.1
+2020-03-22 18:11:48,265 [6] WARN  Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware - Failed to determine the https port for redirect.
+2020-03-22 18:11:48,298 [6] ERROR TEST02.Utlity.Filter.CustomerExceptionFilterAttribute - 系统错误：/Fouth/indexAttempted to divide by zero.
+2020-03-22 18:23:09,102 [20] ERROR Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware - An unhandled exception has occurred while executing the request.
+System.DivideByZeroException: Attempted to divide by zero.
+   at TEST02.Controllers.HomeController.Index() in D:\WORK\VS2019NETCODETEST\TEST02\TEST02\Controllers\HomeController.cs:line 26
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2020-03-22 21:11:59,504 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://[::]:5177
+2020-03-22 21:11:59,511 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2020-03-22 21:11:59,511 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Production
+2020-03-22 21:11:59,512 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: D:\WORK\VS2019NETCODETEST\TEST02\TEST02\bin\Debug\netcoreapp3.1
+2020-03-22 21:12:12,969 [6] WARN  Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware - Failed to determine the https port for redirect.
+2020-03-22 21:15:17,949 [16] INFO  Microsoft.Hosting.Lifetime - Application is shutting down...
+2020-03-22 21:15:31,600 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://[::]:5177
+2020-03-22 21:15:31,608 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2020-03-22 21:15:31,608 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Production
+2020-03-22 21:15:31,608 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: D:\WORK\VS2019NETCODETEST\TEST02\TEST02\bin\Debug\netcoreapp3.1
+2020-03-22 21:15:36,090 [6] WARN  Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware - Failed to determine the https port for redirect.
+2020-03-22 21:18:22,058 [16] INFO  Microsoft.Hosting.Lifetime - Application is shutting down...
+2020-03-22 21:18:35,562 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://[::]:5177
+2020-03-22 21:18:35,570 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2020-03-22 21:18:35,570 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Production
+2020-03-22 21:18:35,571 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: D:\WORK\VS2019NETCODETEST\TEST02\TEST02\bin\Debug\netcoreapp3.1
+2020-03-22 21:18:38,494 [6] WARN  Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware - Failed to determine the https port for redirect.
+2020-03-22 21:40:49,874 [2] INFO  Microsoft.Hosting.Lifetime - Application is shutting down...

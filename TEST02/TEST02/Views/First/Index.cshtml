@@ -1,0 +1,9 @@
+﻿@model CurrentUser
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+<p>@base.Model.Name</p>
+<p>@(((CurrentUser)ViewData["User1"]).Name)</p>
+

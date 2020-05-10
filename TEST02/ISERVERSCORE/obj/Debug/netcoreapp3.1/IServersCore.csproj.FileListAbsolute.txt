@@ -1,0 +1,8 @@
+D:\WORK\VS2019NETCODETEST\TEST02\ISERVERSCORE\obj\Debug\netcoreapp3.1\IServersCore.csproj.CoreCompileInputs.cache
+D:\WORK\VS2019NETCODETEST\TEST02\ISERVERSCORE\obj\Debug\netcoreapp3.1\IServersCore.AssemblyInfoInputs.cache
+D:\WORK\VS2019NETCODETEST\TEST02\ISERVERSCORE\obj\Debug\netcoreapp3.1\IServersCore.AssemblyInfo.cs
+D:\WORK\VS2019NETCODETEST\TEST02\ISERVERSCORE\bin\Debug\netcoreapp3.1\IServersCore.deps.json
+D:\WORK\VS2019NETCODETEST\TEST02\ISERVERSCORE\bin\Debug\netcoreapp3.1\IServersCore.dll
+D:\WORK\VS2019NETCODETEST\TEST02\ISERVERSCORE\bin\Debug\netcoreapp3.1\IServersCore.pdb
+D:\WORK\VS2019NETCODETEST\TEST02\ISERVERSCORE\obj\Debug\netcoreapp3.1\IServersCore.dll
+D:\WORK\VS2019NETCODETEST\TEST02\ISERVERSCORE\obj\Debug\netcoreapp3.1\IServersCore.pdb

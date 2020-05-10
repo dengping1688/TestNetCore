@@ -1,0 +1,400 @@
+2020-04-12 14:16:54,325 [1] FATAL Microsoft.AspNetCore.Server.Kestrel - Unable to start Kestrel.
+System.IO.IOException: Failed to bind to address https://127.0.0.1:5001: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+ ---> System.Net.Sockets.SocketException (10048): 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer.<>c__DisplayClass21_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(IServerAddressesFeature addresses, KestrelServerOptions serverOptions, ILogger logger, Func`2 createBinding)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+2020-04-12 14:17:41,611 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:5001
+2020-04-12 14:17:41,625 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2020-04-12 14:17:41,627 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2020-04-12 14:17:41,629 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2020-04-12 14:17:41,631 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: D:\WORK\VS2019NETCODETEST\TEST02\TEST02
+2020-04-12 14:33:41,332 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:5001
+2020-04-12 14:33:41,341 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2020-04-12 14:33:41,343 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2020-04-12 14:33:41,344 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2020-04-12 14:33:41,346 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: D:\WORK\VS2019NETCODETEST\TEST02\TEST02
+2020-04-12 15:34:47,229 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:5001
+2020-04-12 15:34:47,235 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2020-04-12 15:34:47,236 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2020-04-12 15:34:47,236 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2020-04-12 15:34:47,236 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: D:\WORK\VS2019NETCODETEST\TEST02\TEST02
+2020-04-12 15:34:57,742 [2] INFO  Microsoft.Hosting.Lifetime - Application is shutting down...
+2020-04-12 15:37:28,792 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:5001
+2020-04-12 15:37:28,798 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2020-04-12 15:37:28,798 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2020-04-12 15:37:28,799 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2020-04-12 15:37:28,799 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: D:\WORK\VS2019NETCODETEST\TEST02\TEST02
+2020-04-12 15:37:29,489 [10] ERROR Microsoft.AspNetCore.Server.Kestrel - Connection id "0HLUUMHDAN266", Request id "0HLUUMHDAN266:00000001": An unhandled exception was thrown by the application.
+System.ObjectDisposedException: Cannot write to the response body, the response has completed.
+Object name: 'HttpResponseStream'.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.<ValidateState>g__ThrowObjectDisposedException|14_0()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.GetSpan(Int32 sizeHint)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.Write(HttpResponse response, String text, Encoding encoding)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, Encoding encoding, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, CancellationToken cancellationToken)
+   at TEST02.Startup.<>c.<<Configure>b__6_3>d.MoveNext() in D:\WORK\VS2019NETCODETEST\TEST02\TEST02\Startup.cs:line 124
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.FireOnCompletedAwaited(Task currentTask, Stack`1 onCompleted)
+2020-04-12 15:37:41,446 [2] INFO  Microsoft.Hosting.Lifetime - Application is shutting down...
+2020-04-12 15:38:06,585 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:5001
+2020-04-12 15:38:06,592 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2020-04-12 15:38:06,592 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2020-04-12 15:38:06,593 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2020-04-12 15:38:06,593 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: D:\WORK\VS2019NETCODETEST\TEST02\TEST02
+2020-04-12 15:38:07,296 [10] ERROR Microsoft.AspNetCore.Server.Kestrel - Connection id "0HLUUMHOJ5N03", Request id "0HLUUMHOJ5N03:00000001": An unhandled exception was thrown by the application.
+System.ObjectDisposedException: Cannot write to the response body, the response has completed.
+Object name: 'HttpResponseStream'.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.<ValidateState>g__ThrowObjectDisposedException|14_0()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.GetSpan(Int32 sizeHint)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.Write(HttpResponse response, String text, Encoding encoding)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, Encoding encoding, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, CancellationToken cancellationToken)
+   at TEST02.Startup.<>c.<<Configure>b__6_3>d.MoveNext() in D:\WORK\VS2019NETCODETEST\TEST02\TEST02\Startup.cs:line 124
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.FireOnCompletedAwaited(Task currentTask, Stack`1 onCompleted)
+2020-04-12 15:38:13,106 [9] ERROR Microsoft.AspNetCore.Server.Kestrel - Connection id "0HLUUMHOJ5N03", Request id "0HLUUMHOJ5N03:00000003": An unhandled exception was thrown by the application.
+System.ObjectDisposedException: Cannot write to the response body, the response has completed.
+Object name: 'HttpResponseStream'.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.<ValidateState>g__ThrowObjectDisposedException|14_0()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.GetSpan(Int32 sizeHint)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.Write(HttpResponse response, String text, Encoding encoding)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, Encoding encoding, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, CancellationToken cancellationToken)
+   at TEST02.Startup.<>c.<<Configure>b__6_3>d.MoveNext() in D:\WORK\VS2019NETCODETEST\TEST02\TEST02\Startup.cs:line 124
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.FireOnCompletedAwaited(Task currentTask, Stack`1 onCompleted)
+2020-04-12 15:38:13,119 [6] ERROR Microsoft.AspNetCore.Server.Kestrel - Connection id "0HLUUMHOJ5N03", Request id "0HLUUMHOJ5N03:00000005": An unhandled exception was thrown by the application.
+System.ObjectDisposedException: Cannot write to the response body, the response has completed.
+Object name: 'HttpResponseStream'.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.<ValidateState>g__ThrowObjectDisposedException|14_0()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.GetSpan(Int32 sizeHint)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.Write(HttpResponse response, String text, Encoding encoding)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, Encoding encoding, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, CancellationToken cancellationToken)
+   at TEST02.Startup.<>c.<<Configure>b__6_3>d.MoveNext() in D:\WORK\VS2019NETCODETEST\TEST02\TEST02\Startup.cs:line 124
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.FireOnCompletedAwaited(Task currentTask, Stack`1 onCompleted)
+2020-04-12 15:38:13,290 [10] ERROR Microsoft.AspNetCore.Server.Kestrel - Connection id "0HLUUMHOJ5N03", Request id "0HLUUMHOJ5N03:00000007": An unhandled exception was thrown by the application.
+System.ObjectDisposedException: Cannot write to the response body, the response has completed.
+Object name: 'HttpResponseStream'.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.<ValidateState>g__ThrowObjectDisposedException|14_0()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.GetSpan(Int32 sizeHint)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.Write(HttpResponse response, String text, Encoding encoding)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, Encoding encoding, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, CancellationToken cancellationToken)
+   at TEST02.Startup.<>c.<<Configure>b__6_3>d.MoveNext() in D:\WORK\VS2019NETCODETEST\TEST02\TEST02\Startup.cs:line 124
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.FireOnCompletedAwaited(Task currentTask, Stack`1 onCompleted)
+2020-04-12 15:38:13,302 [9] ERROR Microsoft.AspNetCore.Server.Kestrel - Connection id "0HLUUMHOJ5N03", Request id "0HLUUMHOJ5N03:00000009": An unhandled exception was thrown by the application.
+System.ObjectDisposedException: Cannot write to the response body, the response has completed.
+Object name: 'HttpResponseStream'.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.<ValidateState>g__ThrowObjectDisposedException|14_0()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.GetSpan(Int32 sizeHint)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.Write(HttpResponse response, String text, Encoding encoding)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, Encoding encoding, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, CancellationToken cancellationToken)
+   at TEST02.Startup.<>c.<<Configure>b__6_3>d.MoveNext() in D:\WORK\VS2019NETCODETEST\TEST02\TEST02\Startup.cs:line 124
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.FireOnCompletedAwaited(Task currentTask, Stack`1 onCompleted)
+2020-04-12 15:38:13,488 [9] ERROR Microsoft.AspNetCore.Server.Kestrel - Connection id "0HLUUMHOJ5N03", Request id "0HLUUMHOJ5N03:0000000B": An unhandled exception was thrown by the application.
+System.ObjectDisposedException: Cannot write to the response body, the response has completed.
+Object name: 'HttpResponseStream'.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.<ValidateState>g__ThrowObjectDisposedException|14_0()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.GetSpan(Int32 sizeHint)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.Write(HttpResponse response, String text, Encoding encoding)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, Encoding encoding, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, CancellationToken cancellationToken)
+   at TEST02.Startup.<>c.<<Configure>b__6_3>d.MoveNext() in D:\WORK\VS2019NETCODETEST\TEST02\TEST02\Startup.cs:line 124
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.FireOnCompletedAwaited(Task currentTask, Stack`1 onCompleted)
+2020-04-12 15:38:13,501 [10] ERROR Microsoft.AspNetCore.Server.Kestrel - Connection id "0HLUUMHOJ5N03", Request id "0HLUUMHOJ5N03:0000000D": An unhandled exception was thrown by the application.
+System.ObjectDisposedException: Cannot write to the response body, the response has completed.
+Object name: 'HttpResponseStream'.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.<ValidateState>g__ThrowObjectDisposedException|14_0()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.GetSpan(Int32 sizeHint)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.Write(HttpResponse response, String text, Encoding encoding)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, Encoding encoding, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, CancellationToken cancellationToken)
+   at TEST02.Startup.<>c.<<Configure>b__6_3>d.MoveNext() in D:\WORK\VS2019NETCODETEST\TEST02\TEST02\Startup.cs:line 124
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.FireOnCompletedAwaited(Task currentTask, Stack`1 onCompleted)
+2020-04-12 15:38:13,685 [10] ERROR Microsoft.AspNetCore.Server.Kestrel - Connection id "0HLUUMHOJ5N03", Request id "0HLUUMHOJ5N03:0000000F": An unhandled exception was thrown by the application.
+System.ObjectDisposedException: Cannot write to the response body, the response has completed.
+Object name: 'HttpResponseStream'.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.<ValidateState>g__ThrowObjectDisposedException|14_0()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.GetSpan(Int32 sizeHint)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.Write(HttpResponse response, String text, Encoding encoding)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, Encoding encoding, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, CancellationToken cancellationToken)
+   at TEST02.Startup.<>c.<<Configure>b__6_3>d.MoveNext() in D:\WORK\VS2019NETCODETEST\TEST02\TEST02\Startup.cs:line 124
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.FireOnCompletedAwaited(Task currentTask, Stack`1 onCompleted)
+2020-04-12 15:38:13,697 [6] ERROR Microsoft.AspNetCore.Server.Kestrel - Connection id "0HLUUMHOJ5N03", Request id "0HLUUMHOJ5N03:00000011": An unhandled exception was thrown by the application.
+System.ObjectDisposedException: Cannot write to the response body, the response has completed.
+Object name: 'HttpResponseStream'.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.<ValidateState>g__ThrowObjectDisposedException|14_0()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.GetSpan(Int32 sizeHint)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.Write(HttpResponse response, String text, Encoding encoding)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, Encoding encoding, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, CancellationToken cancellationToken)
+   at TEST02.Startup.<>c.<<Configure>b__6_3>d.MoveNext() in D:\WORK\VS2019NETCODETEST\TEST02\TEST02\Startup.cs:line 124
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.FireOnCompletedAwaited(Task currentTask, Stack`1 onCompleted)
+2020-04-12 15:38:13,901 [10] ERROR Microsoft.AspNetCore.Server.Kestrel - Connection id "0HLUUMHOJ5N03", Request id "0HLUUMHOJ5N03:00000013": An unhandled exception was thrown by the application.
+System.ObjectDisposedException: Cannot write to the response body, the response has completed.
+Object name: 'HttpResponseStream'.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.<ValidateState>g__ThrowObjectDisposedException|14_0()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.GetSpan(Int32 sizeHint)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.Write(HttpResponse response, String text, Encoding encoding)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, Encoding encoding, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, CancellationToken cancellationToken)
+   at TEST02.Startup.<>c.<<Configure>b__6_3>d.MoveNext() in D:\WORK\VS2019NETCODETEST\TEST02\TEST02\Startup.cs:line 124
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.FireOnCompletedAwaited(Task currentTask, Stack`1 onCompleted)
+2020-04-12 15:38:13,913 [9] ERROR Microsoft.AspNetCore.Server.Kestrel - Connection id "0HLUUMHOJ5N03", Request id "0HLUUMHOJ5N03:00000015": An unhandled exception was thrown by the application.
+System.ObjectDisposedException: Cannot write to the response body, the response has completed.
+Object name: 'HttpResponseStream'.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.<ValidateState>g__ThrowObjectDisposedException|14_0()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.GetSpan(Int32 sizeHint)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.Write(HttpResponse response, String text, Encoding encoding)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, Encoding encoding, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, CancellationToken cancellationToken)
+   at TEST02.Startup.<>c.<<Configure>b__6_3>d.MoveNext() in D:\WORK\VS2019NETCODETEST\TEST02\TEST02\Startup.cs:line 124
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.FireOnCompletedAwaited(Task currentTask, Stack`1 onCompleted)
+2020-04-12 15:38:14,297 [8] ERROR Microsoft.AspNetCore.Server.Kestrel - Connection id "0HLUUMHOJ5N03", Request id "0HLUUMHOJ5N03:00000017": An unhandled exception was thrown by the application.
+System.ObjectDisposedException: Cannot write to the response body, the response has completed.
+Object name: 'HttpResponseStream'.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.<ValidateState>g__ThrowObjectDisposedException|14_0()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.GetSpan(Int32 sizeHint)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.Write(HttpResponse response, String text, Encoding encoding)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, Encoding encoding, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, CancellationToken cancellationToken)
+   at TEST02.Startup.<>c.<<Configure>b__6_3>d.MoveNext() in D:\WORK\VS2019NETCODETEST\TEST02\TEST02\Startup.cs:line 124
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.FireOnCompletedAwaited(Task currentTask, Stack`1 onCompleted)
+2020-04-12 15:38:14,308 [9] ERROR Microsoft.AspNetCore.Server.Kestrel - Connection id "0HLUUMHOJ5N03", Request id "0HLUUMHOJ5N03:00000019": An unhandled exception was thrown by the application.
+System.ObjectDisposedException: Cannot write to the response body, the response has completed.
+Object name: 'HttpResponseStream'.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.<ValidateState>g__ThrowObjectDisposedException|14_0()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.GetSpan(Int32 sizeHint)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.Write(HttpResponse response, String text, Encoding encoding)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, Encoding encoding, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, CancellationToken cancellationToken)
+   at TEST02.Startup.<>c.<<Configure>b__6_3>d.MoveNext() in D:\WORK\VS2019NETCODETEST\TEST02\TEST02\Startup.cs:line 124
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.FireOnCompletedAwaited(Task currentTask, Stack`1 onCompleted)
+2020-04-12 15:38:14,479 [9] ERROR Microsoft.AspNetCore.Server.Kestrel - Connection id "0HLUUMHOJ5N03", Request id "0HLUUMHOJ5N03:0000001B": An unhandled exception was thrown by the application.
+System.ObjectDisposedException: Cannot write to the response body, the response has completed.
+Object name: 'HttpResponseStream'.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.<ValidateState>g__ThrowObjectDisposedException|14_0()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.GetSpan(Int32 sizeHint)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.Write(HttpResponse response, String text, Encoding encoding)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, Encoding encoding, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, CancellationToken cancellationToken)
+   at TEST02.Startup.<>c.<<Configure>b__6_3>d.MoveNext() in D:\WORK\VS2019NETCODETEST\TEST02\TEST02\Startup.cs:line 124
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.FireOnCompletedAwaited(Task currentTask, Stack`1 onCompleted)
+2020-04-12 15:38:14,489 [6] ERROR Microsoft.AspNetCore.Server.Kestrel - Connection id "0HLUUMHOJ5N03", Request id "0HLUUMHOJ5N03:0000001D": An unhandled exception was thrown by the application.
+System.ObjectDisposedException: Cannot write to the response body, the response has completed.
+Object name: 'HttpResponseStream'.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.<ValidateState>g__ThrowObjectDisposedException|14_0()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.GetSpan(Int32 sizeHint)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.Write(HttpResponse response, String text, Encoding encoding)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, Encoding encoding, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, CancellationToken cancellationToken)
+   at TEST02.Startup.<>c.<<Configure>b__6_3>d.MoveNext() in D:\WORK\VS2019NETCODETEST\TEST02\TEST02\Startup.cs:line 124
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.FireOnCompletedAwaited(Task currentTask, Stack`1 onCompleted)
+2020-04-12 15:38:14,670 [8] ERROR Microsoft.AspNetCore.Server.Kestrel - Connection id "0HLUUMHOJ5N03", Request id "0HLUUMHOJ5N03:0000001F": An unhandled exception was thrown by the application.
+System.ObjectDisposedException: Cannot write to the response body, the response has completed.
+Object name: 'HttpResponseStream'.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.<ValidateState>g__ThrowObjectDisposedException|14_0()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.GetSpan(Int32 sizeHint)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.Write(HttpResponse response, String text, Encoding encoding)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, Encoding encoding, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, CancellationToken cancellationToken)
+   at TEST02.Startup.<>c.<<Configure>b__6_3>d.MoveNext() in D:\WORK\VS2019NETCODETEST\TEST02\TEST02\Startup.cs:line 124
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.FireOnCompletedAwaited(Task currentTask, Stack`1 onCompleted)
+2020-04-12 15:38:14,683 [9] ERROR Microsoft.AspNetCore.Server.Kestrel - Connection id "0HLUUMHOJ5N03", Request id "0HLUUMHOJ5N03:00000021": An unhandled exception was thrown by the application.
+System.ObjectDisposedException: Cannot write to the response body, the response has completed.
+Object name: 'HttpResponseStream'.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.<ValidateState>g__ThrowObjectDisposedException|14_0()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.GetSpan(Int32 sizeHint)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.Write(HttpResponse response, String text, Encoding encoding)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, Encoding encoding, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, CancellationToken cancellationToken)
+   at TEST02.Startup.<>c.<<Configure>b__6_3>d.MoveNext() in D:\WORK\VS2019NETCODETEST\TEST02\TEST02\Startup.cs:line 124
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.FireOnCompletedAwaited(Task currentTask, Stack`1 onCompleted)
+2020-04-12 15:38:14,852 [6] ERROR Microsoft.AspNetCore.Server.Kestrel - Connection id "0HLUUMHOJ5N03", Request id "0HLUUMHOJ5N03:00000023": An unhandled exception was thrown by the application.
+System.ObjectDisposedException: Cannot write to the response body, the response has completed.
+Object name: 'HttpResponseStream'.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.<ValidateState>g__ThrowObjectDisposedException|14_0()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.GetSpan(Int32 sizeHint)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.Write(HttpResponse response, String text, Encoding encoding)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, Encoding encoding, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, CancellationToken cancellationToken)
+   at TEST02.Startup.<>c.<<Configure>b__6_3>d.MoveNext() in D:\WORK\VS2019NETCODETEST\TEST02\TEST02\Startup.cs:line 124
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.FireOnCompletedAwaited(Task currentTask, Stack`1 onCompleted)
+2020-04-12 15:38:14,865 [10] ERROR Microsoft.AspNetCore.Server.Kestrel - Connection id "0HLUUMHOJ5N03", Request id "0HLUUMHOJ5N03:00000025": An unhandled exception was thrown by the application.
+System.ObjectDisposedException: Cannot write to the response body, the response has completed.
+Object name: 'HttpResponseStream'.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.<ValidateState>g__ThrowObjectDisposedException|14_0()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.GetSpan(Int32 sizeHint)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.Write(HttpResponse response, String text, Encoding encoding)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, Encoding encoding, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, CancellationToken cancellationToken)
+   at TEST02.Startup.<>c.<<Configure>b__6_3>d.MoveNext() in D:\WORK\VS2019NETCODETEST\TEST02\TEST02\Startup.cs:line 124
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.FireOnCompletedAwaited(Task currentTask, Stack`1 onCompleted)
+2020-04-12 15:38:20,472 [8] ERROR Microsoft.AspNetCore.Server.Kestrel - Connection id "0HLUUMHOJ5N03", Request id "0HLUUMHOJ5N03:00000027": An unhandled exception was thrown by the application.
+System.ObjectDisposedException: Cannot write to the response body, the response has completed.
+Object name: 'HttpResponseStream'.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.<ValidateState>g__ThrowObjectDisposedException|14_0()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.GetSpan(Int32 sizeHint)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.Write(HttpResponse response, String text, Encoding encoding)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, Encoding encoding, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, CancellationToken cancellationToken)
+   at TEST02.Startup.<>c.<<Configure>b__6_3>d.MoveNext() in D:\WORK\VS2019NETCODETEST\TEST02\TEST02\Startup.cs:line 124
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.FireOnCompletedAwaited(Task currentTask, Stack`1 onCompleted)
+2020-04-12 15:38:20,485 [10] ERROR Microsoft.AspNetCore.Server.Kestrel - Connection id "0HLUUMHOJ5N03", Request id "0HLUUMHOJ5N03:00000029": An unhandled exception was thrown by the application.
+System.ObjectDisposedException: Cannot write to the response body, the response has completed.
+Object name: 'HttpResponseStream'.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.<ValidateState>g__ThrowObjectDisposedException|14_0()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.GetSpan(Int32 sizeHint)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.Write(HttpResponse response, String text, Encoding encoding)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, Encoding encoding, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, CancellationToken cancellationToken)
+   at TEST02.Startup.<>c.<<Configure>b__6_3>d.MoveNext() in D:\WORK\VS2019NETCODETEST\TEST02\TEST02\Startup.cs:line 124
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.FireOnCompletedAwaited(Task currentTask, Stack`1 onCompleted)
+2020-04-12 15:38:20,889 [6] ERROR Microsoft.AspNetCore.Server.Kestrel - Connection id "0HLUUMHOJ5N03", Request id "0HLUUMHOJ5N03:0000002B": An unhandled exception was thrown by the application.
+System.ObjectDisposedException: Cannot write to the response body, the response has completed.
+Object name: 'HttpResponseStream'.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.<ValidateState>g__ThrowObjectDisposedException|14_0()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.GetSpan(Int32 sizeHint)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.Write(HttpResponse response, String text, Encoding encoding)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, Encoding encoding, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, CancellationToken cancellationToken)
+   at TEST02.Startup.<>c.<<Configure>b__6_3>d.MoveNext() in D:\WORK\VS2019NETCODETEST\TEST02\TEST02\Startup.cs:line 124
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.FireOnCompletedAwaited(Task currentTask, Stack`1 onCompleted)
+2020-04-12 15:38:20,902 [8] ERROR Microsoft.AspNetCore.Server.Kestrel - Connection id "0HLUUMHOJ5N03", Request id "0HLUUMHOJ5N03:0000002D": An unhandled exception was thrown by the application.
+System.ObjectDisposedException: Cannot write to the response body, the response has completed.
+Object name: 'HttpResponseStream'.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.<ValidateState>g__ThrowObjectDisposedException|14_0()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.GetSpan(Int32 sizeHint)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.Write(HttpResponse response, String text, Encoding encoding)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, Encoding encoding, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, CancellationToken cancellationToken)
+   at TEST02.Startup.<>c.<<Configure>b__6_3>d.MoveNext() in D:\WORK\VS2019NETCODETEST\TEST02\TEST02\Startup.cs:line 124
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.FireOnCompletedAwaited(Task currentTask, Stack`1 onCompleted)
+2020-04-12 15:38:21,271 [10] ERROR Microsoft.AspNetCore.Server.Kestrel - Connection id "0HLUUMHOJ5N03", Request id "0HLUUMHOJ5N03:0000002F": An unhandled exception was thrown by the application.
+System.ObjectDisposedException: Cannot write to the response body, the response has completed.
+Object name: 'HttpResponseStream'.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.<ValidateState>g__ThrowObjectDisposedException|14_0()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.GetSpan(Int32 sizeHint)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.Write(HttpResponse response, String text, Encoding encoding)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, Encoding encoding, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, CancellationToken cancellationToken)
+   at TEST02.Startup.<>c.<<Configure>b__6_3>d.MoveNext() in D:\WORK\VS2019NETCODETEST\TEST02\TEST02\Startup.cs:line 124
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.FireOnCompletedAwaited(Task currentTask, Stack`1 onCompleted)
+2020-04-12 15:38:21,291 [9] ERROR Microsoft.AspNetCore.Server.Kestrel - Connection id "0HLUUMHOJ5N03", Request id "0HLUUMHOJ5N03:00000031": An unhandled exception was thrown by the application.
+System.ObjectDisposedException: Cannot write to the response body, the response has completed.
+Object name: 'HttpResponseStream'.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.<ValidateState>g__ThrowObjectDisposedException|14_0()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.GetSpan(Int32 sizeHint)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.Write(HttpResponse response, String text, Encoding encoding)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, Encoding encoding, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, CancellationToken cancellationToken)
+   at TEST02.Startup.<>c.<<Configure>b__6_3>d.MoveNext() in D:\WORK\VS2019NETCODETEST\TEST02\TEST02\Startup.cs:line 124
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.FireOnCompletedAwaited(Task currentTask, Stack`1 onCompleted)
+2020-04-12 15:38:21,466 [10] ERROR Microsoft.AspNetCore.Server.Kestrel - Connection id "0HLUUMHOJ5N03", Request id "0HLUUMHOJ5N03:00000033": An unhandled exception was thrown by the application.
+System.ObjectDisposedException: Cannot write to the response body, the response has completed.
+Object name: 'HttpResponseStream'.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.<ValidateState>g__ThrowObjectDisposedException|14_0()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.GetSpan(Int32 sizeHint)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.Write(HttpResponse response, String text, Encoding encoding)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, Encoding encoding, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, CancellationToken cancellationToken)
+   at TEST02.Startup.<>c.<<Configure>b__6_3>d.MoveNext() in D:\WORK\VS2019NETCODETEST\TEST02\TEST02\Startup.cs:line 124
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.FireOnCompletedAwaited(Task currentTask, Stack`1 onCompleted)
+2020-04-12 15:38:21,480 [9] ERROR Microsoft.AspNetCore.Server.Kestrel - Connection id "0HLUUMHOJ5N03", Request id "0HLUUMHOJ5N03:00000035": An unhandled exception was thrown by the application.
+System.ObjectDisposedException: Cannot write to the response body, the response has completed.
+Object name: 'HttpResponseStream'.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.<ValidateState>g__ThrowObjectDisposedException|14_0()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.GetSpan(Int32 sizeHint)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.Write(HttpResponse response, String text, Encoding encoding)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, Encoding encoding, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, CancellationToken cancellationToken)
+   at TEST02.Startup.<>c.<<Configure>b__6_3>d.MoveNext() in D:\WORK\VS2019NETCODETEST\TEST02\TEST02\Startup.cs:line 124
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.FireOnCompletedAwaited(Task currentTask, Stack`1 onCompleted)
+2020-04-12 15:38:43,557 [8] ERROR Microsoft.AspNetCore.Server.Kestrel - Connection id "0HLUUMHOJ5N03", Request id "0HLUUMHOJ5N03:00000037": An unhandled exception was thrown by the application.
+System.ObjectDisposedException: Cannot write to the response body, the response has completed.
+Object name: 'HttpResponseStream'.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.<ValidateState>g__ThrowObjectDisposedException|14_0()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.GetSpan(Int32 sizeHint)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.Write(HttpResponse response, String text, Encoding encoding)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, Encoding encoding, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, CancellationToken cancellationToken)
+   at TEST02.Startup.<>c.<<Configure>b__6_3>d.MoveNext() in D:\WORK\VS2019NETCODETEST\TEST02\TEST02\Startup.cs:line 124
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.FireOnCompletedAwaited(Task currentTask, Stack`1 onCompleted)
+2020-04-12 15:38:43,596 [6] ERROR Microsoft.AspNetCore.Server.Kestrel - Connection id "0HLUUMHOJ5N03", Request id "0HLUUMHOJ5N03:00000039": An unhandled exception was thrown by the application.
+System.ObjectDisposedException: Cannot write to the response body, the response has completed.
+Object name: 'HttpResponseStream'.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.<ValidateState>g__ThrowObjectDisposedException|14_0()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.GetSpan(Int32 sizeHint)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.Write(HttpResponse response, String text, Encoding encoding)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, Encoding encoding, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, CancellationToken cancellationToken)
+   at TEST02.Startup.<>c.<<Configure>b__6_3>d.MoveNext() in D:\WORK\VS2019NETCODETEST\TEST02\TEST02\Startup.cs:line 124
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.FireOnCompletedAwaited(Task currentTask, Stack`1 onCompleted)
+2020-04-12 15:38:57,188 [2] INFO  Microsoft.Hosting.Lifetime - Application is shutting down...
+2020-04-12 15:49:10,847 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:5001
+2020-04-12 15:49:10,853 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2020-04-12 15:49:10,854 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2020-04-12 15:49:10,854 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2020-04-12 15:49:10,854 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: D:\WORK\VS2019NETCODETEST\TEST02\TEST02
+2020-04-12 15:54:47,803 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:5001
+2020-04-12 15:54:47,811 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2020-04-12 15:54:47,811 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2020-04-12 15:54:47,812 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2020-04-12 15:54:47,812 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: D:\WORK\VS2019NETCODETEST\TEST02\TEST02
+2020-04-12 15:54:53,929 [2] INFO  Microsoft.Hosting.Lifetime - Application is shutting down...
+2020-04-12 15:55:08,000 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:5001
+2020-04-12 15:55:08,007 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2020-04-12 15:55:08,007 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2020-04-12 15:55:08,008 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2020-04-12 15:55:08,008 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: D:\WORK\VS2019NETCODETEST\TEST02\TEST02
+2020-04-12 15:55:15,421 [2] INFO  Microsoft.Hosting.Lifetime - Application is shutting down...
+2020-04-12 15:56:19,453 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:5001
+2020-04-12 15:56:19,466 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2020-04-12 15:56:19,468 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2020-04-12 15:56:19,470 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2020-04-12 15:56:19,472 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: D:\WORK\VS2019NETCODETEST\TEST02\TEST02
