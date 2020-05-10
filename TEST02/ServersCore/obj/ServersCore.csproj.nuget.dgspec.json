@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\WORK\\VS2019NETCODETEST\\TEST02\\ServersCore\\ServersCore.csproj": {}
+    "D:\\WORK\\GitSource\\Repos\\TestNetCore\\TEST02\\ServersCore\\ServersCore.csproj": {}
   },
   "projects": {
-    "D:\\WORK\\VS2019NETCODETEST\\TEST02\\ISERVERSCORE\\IServersCore.csproj": {
+    "D:\\WORK\\GitSource\\Repos\\TestNetCore\\TEST02\\ISERVERSCORE\\IServersCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\WORK\\VS2019NETCODETEST\\TEST02\\ISERVERSCORE\\IServersCore.csproj",
+        "projectUniqueName": "D:\\WORK\\GitSource\\Repos\\TestNetCore\\TEST02\\ISERVERSCORE\\IServersCore.csproj",
         "projectName": "IServersCore",
-        "projectPath": "D:\\WORK\\VS2019NETCODETEST\\TEST02\\ISERVERSCORE\\IServersCore.csproj",
+        "projectPath": "D:\\WORK\\GitSource\\Repos\\TestNetCore\\TEST02\\ISERVERSCORE\\IServersCore.csproj",
         "packagesPath": "C:\\Users\\DP\\.nuget\\packages\\",
-        "outputPath": "D:\\WORK\\VS2019NETCODETEST\\TEST02\\ISERVERSCORE\\obj\\",
+        "outputPath": "D:\\WORK\\GitSource\\Repos\\TestNetCore\\TEST02\\ISERVERSCORE\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DP\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -56,14 +56,14 @@
         }
       }
     },
-    "D:\\WORK\\VS2019NETCODETEST\\TEST02\\ServersCore\\ServersCore.csproj": {
+    "D:\\WORK\\GitSource\\Repos\\TestNetCore\\TEST02\\ServersCore\\ServersCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\WORK\\VS2019NETCODETEST\\TEST02\\ServersCore\\ServersCore.csproj",
+        "projectUniqueName": "D:\\WORK\\GitSource\\Repos\\TestNetCore\\TEST02\\ServersCore\\ServersCore.csproj",
         "projectName": "ServersCore",
-        "projectPath": "D:\\WORK\\VS2019NETCODETEST\\TEST02\\ServersCore\\ServersCore.csproj",
+        "projectPath": "D:\\WORK\\GitSource\\Repos\\TestNetCore\\TEST02\\ServersCore\\ServersCore.csproj",
         "packagesPath": "C:\\Users\\DP\\.nuget\\packages\\",
-        "outputPath": "D:\\WORK\\VS2019NETCODETEST\\TEST02\\ServersCore\\obj\\",
+        "outputPath": "D:\\WORK\\GitSource\\Repos\\TestNetCore\\TEST02\\ServersCore\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DP\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -79,8 +79,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\WORK\\VS2019NETCODETEST\\TEST02\\ISERVERSCORE\\IServersCore.csproj": {
-                "projectPath": "D:\\WORK\\VS2019NETCODETEST\\TEST02\\ISERVERSCORE\\IServersCore.csproj"
+              "D:\\WORK\\GitSource\\Repos\\TestNetCore\\TEST02\\ISERVERSCORE\\IServersCore.csproj": {
+                "projectPath": "D:\\WORK\\GitSource\\Repos\\TestNetCore\\TEST02\\ISERVERSCORE\\IServersCore.csproj"
               }
             }
           }

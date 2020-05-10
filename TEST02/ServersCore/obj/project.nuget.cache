@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CNj4p8RNF9Gx0qQj56niqDzZf0tW9hlEObsmglcEAwFmxraNaEncTjojXOlP8N/yJbF0VhdQZO+8f67na9e7Pw==",
+  "dgSpecHash": "7F2HpwakRB7yjP8dnbzamMCA1rKBbCAuoXG6QJXrPsZ4QW/BDz6bPvQRAkd0RrN4aPPxiYxtVmcHwawVWLiUAQ==",
   "success": true,
-  "projectFilePath": "D:\\WORK\\VS2019NETCODETEST\\TEST02\\ServersCore\\ServersCore.csproj",
+  "projectFilePath": "D:\\WORK\\GitSource\\Repos\\TestNetCore\\TEST02\\ServersCore\\ServersCore.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

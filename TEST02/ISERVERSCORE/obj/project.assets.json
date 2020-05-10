@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\WORK\\VS2019NETCODETEST\\TEST02\\ISERVERSCORE\\ISERVERSCORE.csproj",
-      "projectName": "ISERVERSCORE",
-      "projectPath": "D:\\WORK\\VS2019NETCODETEST\\TEST02\\ISERVERSCORE\\ISERVERSCORE.csproj",
+      "projectUniqueName": "D:\\WORK\\GitSource\\Repos\\TestNetCore\\TEST02\\ISERVERSCORE\\IServersCore.csproj",
+      "projectName": "IServersCore",
+      "projectPath": "D:\\WORK\\GitSource\\Repos\\TestNetCore\\TEST02\\ISERVERSCORE\\IServersCore.csproj",
       "packagesPath": "C:\\Users\\DP\\.nuget\\packages\\",
-      "outputPath": "D:\\WORK\\VS2019NETCODETEST\\TEST02\\ISERVERSCORE\\obj\\",
+      "outputPath": "D:\\WORK\\GitSource\\Repos\\TestNetCore\\TEST02\\ISERVERSCORE\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\DP\\AppData\\Roaming\\NuGet\\NuGet.Config",
